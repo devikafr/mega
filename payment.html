@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Megalearning Payment</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  </head>
+  <body>
+      <div class="container"id="topContainer">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default" id="">
+              <div class="panel-heading" id="panelHead">
+                <img class="pull-right" id="logo" src="http://www.credit-card-logos.com/images/multiple_credit-card-logos-1/credit_card_logos_17.gif" width="235" height="35" border="0">
+                <h3 class="panel-title">Payment details</h3>
+              </div>
+              <div class="panel-body">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="cardnumber">Name on the card</label>
+                        <input type="text" class="form-control"  placeholder="Card holder's name" required autofocus data-stripe="number"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="cardnumber">Card Number</label>
+                        <input type="text" class="form-control"  placeholder="Valid Card Number" required autofocus data-stripe="number"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-7 col-md-7">
+                        <div class="form-group">
+                          <label for="expdate" id="">Card Expiary Date</label><br>
+                          <div class="col-xs-6 col-lg-6 pl-ziro" id="mm">
+                          <input type="text" class="form-control" placeholder="MM" require data-stripe="exp_month"/>
+                          </div>
+                          <div class="col-xs-6 col-lg-6 pl-ziro"id="yy">
+                          <input type="text" class="form-control" placeholder="YY" required data-stripe="exp_year"/>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-5 col-md-5 pull-right">
+                      <div class="from-group">
+                        <label for="cvcCode">CVC</label>
+                        <input type="password" class="form-control" placeholder="CV" required data-stripe="cvc"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <button class="btn btn-success btn-lg btn-block" id="btnPay" type="submit">Pay</button>
+                    </div>
+                  </div>
+                  <div class="row" style="display:none;">
+                    <div class="col-xs-12">
+                      <p class="payment-errors"></p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+              <!--include actual publishable API key-->
+              <script type="text/javascript">
+              Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+              </script>
+
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+  </html>
